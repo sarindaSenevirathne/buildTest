@@ -11,7 +11,7 @@ import ballerina/cache;
 
 // Read config from environment (uses ballerina/os)
 final string servicePort = os:getEnv("SERVICE_PORT") == "" ? "8080" : os:getEnv("SERVICE_PORT");
-final string serviceEnv = os:getEnv("SERVICE_ENV") == "" ? "development" : os:getEnv("SERVICE_ENV");
+final string serviceEnv = os:getEnv("SERVICE_ENV") == "" ? "dev" : os:getEnv("SERVICE_ENV");
 
 // In-memory store
 map<Item> itemStore = {};
