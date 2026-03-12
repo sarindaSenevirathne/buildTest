@@ -31,7 +31,7 @@ configurable int mssqlPort = 1433;
 map<Item> itemStore = {};
 
 // Cache for recently fetched items (uses ballerina/cache)
-final cache:Cache itemCache = new ({capacity: 100, evictionFactor: 0.2});
+final cache:Cache itemCache = new ({capacity: 50, evictionFactor: 0.2});
 
 type Item record {|
     string id;
