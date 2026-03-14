@@ -27,7 +27,7 @@ configurable int oraclePort = 1521;
 configurable string mssqlHost = "localhost";
 configurable int mssqlPort = 1433;
 
-// In-memory store
+// In-memory item store
 map<Item> itemStore = {};
 
 // Cache for recently fetched items (uses ballerina/cache)
