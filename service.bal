@@ -70,7 +70,7 @@ service /api on new http:Listener(8080) {
     // GET /api/health
     resource function get health() returns HealthResponse {
         string timestamp = time:utcToString(time:utcNow());
-        log:printInfo("Health check", env = serviceEnv, port = servicePort);
+        log:printInfo("Health check invoked", env = serviceEnv, port = servicePort);
         io:println("Health check at: ", timestamp);
         return {
             status: "UP",
