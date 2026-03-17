@@ -71,7 +71,7 @@ service /api on new http:Listener(8080) {
     resource function get health() returns HealthResponse {
         string timestamp = time:utcToString(time:utcNow());
         log:printInfo("Health check", env = serviceEnv, port = servicePort);
-        io:println("Health endpoint called at: ", timestamp);
+        io:println("Health check at: ", timestamp);
         return {
             status: "UP",
             env: serviceEnv,
