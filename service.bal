@@ -72,7 +72,7 @@ service /api on new http:Listener(8080) {
     resource function get health() returns HealthResponse {
         string timestamp = time:utcToString(time:utcNow());
         log:printInfo("Health check invoked", env = serviceEnv, port = servicePort);
-        io:println("Health endpoint called at: ", timestamp);
+        io:println("Health check at: ", timestamp);
         build_test_module:logMessage("Health endpoint invoked");
         return {
             status: "UP",
