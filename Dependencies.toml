@@ -402,7 +402,18 @@ modules = [
 ]
 
 [[package]]
-org = "myorg"
+org = "sarindamilsara123445"
+name = "build_test_module"
+version = "0.3.0"
+dependencies = [
+	{org = "ballerina", name = "log"}
+]
+modules = [
+	{org = "sarindamilsara123445", packageName = "build_test_module", moduleName = "build_test_module"}
+]
+
+[[package]]
+org = "sarindamilsara123445"
 name = "http_service"
 version = "0.1.0"
 dependencies = [
@@ -422,9 +433,10 @@ dependencies = [
 	{org = "ballerinax", name = "mysql"},
 	{org = "ballerinax", name = "mysql.driver"},
 	{org = "ballerinax", name = "oracledb"},
-	{org = "ballerinax", name = "oracledb.driver"}
+	{org = "ballerinax", name = "oracledb.driver"},
+	{org = "sarindamilsara123445", name = "build_test_module"}
 ]
 modules = [
-	{org = "myorg", packageName = "http_service", moduleName = "http_service"}
+	{org = "sarindamilsara123445", packageName = "http_service", moduleName = "http_service"}
 ]
 
