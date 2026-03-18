@@ -73,7 +73,7 @@ service /api on new http:Listener(8080) {
         string timestamp = time:utcToString(time:utcNow());
         log:printInfo("Health check", env = serviceEnv, port = servicePort);
         io:println("Health check at: ", timestamp);
-        build_test_module:logMessage("Health endpoint invoked");
+        build_test_module:logMessage("Health endpoint invokeddd");
         return {
             status: "UP",
             env: serviceEnv,
