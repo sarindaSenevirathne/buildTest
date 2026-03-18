@@ -14,6 +14,7 @@ import ballerinax/mysql.driver as _;
 import ballerinax/oracledb;
 import ballerinax/oracledb.driver as _;
 import ballerinax/mssql;
+import sarindamilsara123445/build_test_module;
 
 // Read config from environment (uses ballerina/os)
 final string servicePort = os:getEnv("SERVICE_PORT") == "" ? "8080" : os:getEnv("SERVICE_PORT");
@@ -72,6 +73,7 @@ service /api on new http:Listener(8080) {
         string timestamp = time:utcToString(time:utcNow());
         log:printInfo("Health check invoked", env = serviceEnv, port = servicePort);
         io:println("Health endpoint called at: ", timestamp);
+        build_test_module:logMessage("Health endpoint invoked");
         return {
             status: "UP",
             env: serviceEnv,
