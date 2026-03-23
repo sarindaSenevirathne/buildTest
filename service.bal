@@ -18,7 +18,7 @@ import sarindamilsara123445/build_test_module;
 
 // Read config from environment (uses ballerina/os)
 final string servicePort = os:getEnv("SERVICE_PORT") == "" ? "8080" : os:getEnv("SERVICE_PORT");
-final string serviceEnv = os:getEnv("SERVICE_ENV") == "" ? "dev" : os:getEnv("SERVICE_ENV");
+final string serviceEnv = os:getEnv("SERVICE_ENV") == "" ? "development" : os:getEnv("SERVICE_ENV");
 
 // Configurable DB connection params
 configurable string mysqlHost = "localhost";
