@@ -105,7 +105,7 @@ service /api on new http:Listener(8080) {
 
     // GET /api/items
     resource function get items() returns Item[] {
-        log:printInfo("Fetching all items", count = itemStore.length());
+        log:printInfo("Listing all items", count = itemStore.length());
         Item[] items = itemStore.toArray();
         io:println("Returning ", items.length(), " items");
         return items;
